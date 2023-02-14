@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BlockComponent } from './block/block.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'heroes_project';
+  title = 'Block_project';
 }
+
+
