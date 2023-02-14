@@ -1,0 +1,21 @@
+<div class="contact-card">
+    <img [src]="user.photo" alt="User photo">
+    <div>
+      <h2>{{ user.name }} {{ user.firstName }}</h2>
+      <div *ngIf="showAge">
+        <p>Age: {{ user.age }}</p>
+      </div>
+      <div *ngIf="!editQuote; else editMode">
+        <p>Quote: {{ user.quote }}</p>
+        <button (click)="editQuote = true">Edit Quote</button>
+      </div>
+      <ng-template #editMode>
+        <input [(ngModel)]="user.quote" (blur)="editQuote = false">
+        <button (click)="editQuote = false">Save Quote</button>
+      </ng-template>
+      <button (click)="toggleAge()">
+        {{ showAge ? 'Hide Age' : 'Show Age' }}
+      </button>
+    </div>
+  </div>
+  
