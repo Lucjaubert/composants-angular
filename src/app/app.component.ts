@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { BlockComponent } from './block/block.component';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +6,13 @@ import { BlockComponent } from './block/block.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Block_project';
+  isAdmin: boolean = false;
+  isAdminStatus: boolean = false;
+
+  toggleAdmin() {
+    this.isAdmin = !this.isAdmin;
+    this.isAdminStatus = !this.isAdminStatus;
+  }
 }
 
 
